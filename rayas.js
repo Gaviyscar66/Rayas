@@ -33,28 +33,6 @@ function handleCellClick(e) {
     }
 }
 
-function showWinAlert(winner) {
-    const alertElement = document.createElement('div');
-    alertElement.classList.add('alert', 'alert-win');
-    alertElement.innerHTML = `<p>${winner} Ganó</p>`;
-    document.body.appendChild(alertElement);
-    setTimeout(() => {
-        alertElement.style.display = 'none';
-        alertElement.remove();
-    }, 2000);
-}
-
-function showTieAlert() {
-    const alertElement = document.createElement('div');
-    alertElement.classList.add('alert', 'alert-tie');
-    alertElement.innerHTML = '<p>Empate</p>';
-    document.body.appendChild(alertElement);
-    setTimeout(() => {
-        alertElement.style.display = 'none';
-        alertElement.remove();
-    }, 2000);
-}
-
 
 function checkWin(player) {
     for (const condition of winConditions) {
